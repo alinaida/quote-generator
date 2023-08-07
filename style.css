@@ -1,0 +1,175 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+html {
+    background-color: #D668E3;
+    font-family: 'Quicksand', sans-serif;
+    color: #582C12;
+    line-height: 1.2;
+}
+
+/* Header styles */
+header {
+    background-color: #FFD43A;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Main content styles */
+main {
+    text-align: center;
+}
+
+/* Characters grid styles */
+.characters {
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    justify-content: center;
+    gap: 15px;
+    padding: 45px 5px;    
+}
+
+/* Character styles */
+.character {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+    background-color: #dac167;
+    font-size: 5rem;
+    border: 2px solid #582C12;
+    border-radius: 30%;
+    cursor: pointer;
+}
+
+.character img {
+    max-width: 100%;
+}
+
+/* Character description styles */
+.character-descriptions {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    padding: 10px;
+    background-color: #fff;
+    color: #582C12;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.character:hover .character-descriptions {
+    visibility: visible;
+}
+
+/* Container styles */
+.container {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+/* Loading styles */
+.loading {
+    display: grid;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    z-index: 999;
+    background-color: rgba(236, 203, 252, 0.8);
+}
+
+.loading img {
+    max-width: 150px;
+}
+
+/* Hidden state */
+.pre {
+    display: none;
+}
+
+/* Note styles */
+.note {
+    background-color: rgba(236, 203, 252, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    padding: 110px;
+}
+
+/* Note box styles */
+.note-box {
+    position: relative;
+    width: 100%;
+    max-width: 512px;
+    margin: 25px auto;
+    background-color: #ffffff; 
+    border: 2px solid #582C12;
+    animation: pop-effect 0.3s ease-out;
+}
+
+/* Note content styles */
+.note-content {
+    padding: 30px;
+}
+
+/* Note closing styles */
+.note-closing {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.note-closing:hover {
+    background-color: #D668E3;
+}
+
+/* Note content code styles */
+.note-content > code {
+    display: block;
+    font-size: 10px;
+    color: #D668E3;
+}
+
+/* Keyframes animation */
+@keyframes pop-effect {
+    0% {
+        transform: scale(0.75);
+    }
+    40% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
